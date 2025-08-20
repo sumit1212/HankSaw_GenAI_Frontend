@@ -402,7 +402,7 @@ export default function ChatUI() {
     // Stream from backend
     let accumulated = "";
     try {
-      const response = await fetch(`https://hanksaw-genai-backend.onrender.com/chat/?question=${encodeURIComponent(text)}`);
+      const response = await fetch(`https://hanksaw-genai-backend.onrender.com/chat?question=${encodeURIComponent(text)}`);
       if (!response.ok || !response.body) throw new Error(`HTTP ${response.status}`);
 
       const reader = response.body.getReader();
